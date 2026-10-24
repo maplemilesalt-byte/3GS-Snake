@@ -2,7 +2,7 @@
 #define CELL 16
 #define COLS 20
 #define ROWS 26
-typedef struct { NSInteger x,y; } Point
+typedef struct { NSInteger x,y; } Point;
 @interface SnakeView ()
 @property(nonatomic,retain) NSTimer *timer; @property(nonatomic,retain) UIImage *headImage; @property(nonatomic,retain) UIImage *bodyImage; @property(nonatomic,retain) UIImage *foodImage; @property(nonatomic,retain) NSMutableArray *snake; @property(nonatomic,assign) Point dir; @property(nonatomic,assign) Point queued; @property(nonatomic,assign) Point food; @property(nonatomic,assign) NSInteger score; @property(nonatomic,assign) BOOL over;
 @end
