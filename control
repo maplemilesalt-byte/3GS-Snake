@@ -1,0 +1,9 @@
+Package: com.maplemilesalt.snake3gs
+Name: Snake 3GS
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Classic Snake game for iPhone 3GS
+Maintainer: Maple
+Author: Maple
+Section: Games
+Depends: firmware (>= 3.0)
