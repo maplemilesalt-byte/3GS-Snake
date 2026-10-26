@@ -1,0 +1,27 @@
+name: Build Snake 3GS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Theos
+        uses: Randomblock1/theos-action@v1
+
+      - name: Build Debian package
+        run: make package FINALPACKAGE=1
+
+      - name: Upload Debian package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Snake3GS-deb
+          path: packages/*.deb
+          if-no-files-found: error
+          retention-days: 14
