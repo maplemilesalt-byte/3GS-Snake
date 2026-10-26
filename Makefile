@@ -1,4 +1,4 @@
-TARGET = iphone:clang:latest:6.0
+TARGET = iphone:clang:latest:3.0
 ARCHS = armv7
 include $(THEOS)/makefiles/common.mk
 APPLICATION_NAME = Snake3GS
